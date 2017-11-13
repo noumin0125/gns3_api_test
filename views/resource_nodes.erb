@@ -1,0 +1,50 @@
+﻿<div class="container">
+
+  <section class="content-header">
+    <h1>リソース管理</h1>
+    <ol class="breadcrumb">
+      <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+    </ol>
+  </section>
+
+  <div class="box box-info">
+    <div class="box-header with-border">
+      <h3 class="box-title">ノード一覧</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+
+    <div class="box-body">
+      <div class="table-responsive">
+        <table class="table no-margin">
+          <thead>
+            <tr>
+              <th>ノード名</th>
+              <th>ノードID</th>
+              <th>ステータス</th>
+              <th colspan="2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @gns3_nodes.each do |i| %>
+            <tr data-id="<%= i['node_id'] %>">
+              <td><%= i['name'] %></td>
+              <td><%= i['node_id'] %></td>
+              <% if i['status'] == 'started' %>
+                <td><i class="fa fa-circle text-green"></i></td>
+              <% else %>
+                <td><i class="fa fa-circle text-red"></i></td>
+              <% end %>
+              <td><button type="button" class="btn btn-primary btn-block btn-flat" onClick="location.href='/resource/<%= i['project_id'] %>/projects/<%= i['node_id'] %>/nodes/start'">起動</button></td>
+              <td><button type="button" class="btn btn-danger btn-block btn-flat" onClick="location.href='/resource/<%= i['project_id'] %>/projects/<%= i['node_id'] %>/nodes/stop'">停止</button></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
