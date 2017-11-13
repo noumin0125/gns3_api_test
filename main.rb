@@ -5,9 +5,6 @@ require "sinatra"
 require 'socket'
 require './lib/api_gns3'
 
-set :environment, :development
-require "sinatra/reloader" if development?
-
 def my_address
  udp = UDPSocket.new
  udp.connect("128.0.0.0", 7)
@@ -17,7 +14,7 @@ def my_address
 end
 
 configure do
-  WEBSERVER  = "http:\/\/#{my_address}:4567".freeze
+  WEBSERVER  = "http://#{my_address}:4567".freeze
   GNS3URL = 'http://192.168.12.6:3080/v2'
   $gns3 = Gns3.new(GNS3URL)
 end
