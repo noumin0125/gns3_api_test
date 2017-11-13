@@ -5,8 +5,8 @@ require 'json'
 require 'uri'
 
 class Gns3
-  def initialize(gns3_url)
-    @base_url = gns3_url
+  def initialize(base_url)
+    @base_url = base_url
   end
 
   def projects
