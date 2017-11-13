@@ -1,1 +1,10 @@
-# networkOperationTrainning
+# GNS3_API_Test
+
+## 機能
+
+GNS3とAPI経由で以下の操作を行います。
+・プロジェクトとノード情報を取得し、一覧表示する
+・ノードの起動/停止する
+
+## 使用方法
+
