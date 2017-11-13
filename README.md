@@ -16,6 +16,7 @@ GNS3 2.0.3
 
 - GNS3 APIサーバを起動する  
 
+![gns3](https://user-images.githubusercontent.com/24976921/32733485-b856c560-c8d2-11e7-9921-ecc873bc289d.png)
 
 
 - Webアプリを起動する
