@@ -18,7 +18,7 @@ configure do
   gns3_port = '3080'
   GNS3_BASE_URL = "http://#{gns3_ip}:#{gns3_port}/v2"
   WEBSERVER  = "http://#{my_address}:4567".freeze
-  $gns3 = Gns3.new(GNS3URL)
+  $gns3 = Gns3.new(GNS3_BASE_URL)
 end
 
 get "/" do
