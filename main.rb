@@ -14,8 +14,10 @@ def my_address
 end
 
 configure do
+  gns3_ip = '192.168.12.6'
+  gns3_port = '3080'
+  GNS3_BASE_URL = "http://#{gns3_ip}:#{gns3_port}/v2"
   WEBSERVER  = "http://#{my_address}:4567".freeze
-  GNS3URL = 'http://192.168.12.6:3080/v2'
   $gns3 = Gns3.new(GNS3URL)
 end
 
