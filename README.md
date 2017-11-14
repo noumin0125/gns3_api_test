@@ -20,7 +20,8 @@ GNS3 2.0.3
 
 - main.rbを編集する  
 
-`  GNS3URL = 'http://<APIサーバのIPアドレス>:<ポート番号>/v2'`  
+`  gns3_ip = '<GNS3 APIサーバのIPアドレス>'`  
+`  gns3_port = 'GNS3 APIサーバのポート番号'`  
 
 - Webアプリを起動する  
 
